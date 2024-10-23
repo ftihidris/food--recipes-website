@@ -1,0 +1,17 @@
+<div *ngIf="tags">
+    <a *ngFor="let tag of tags" 
+       [routerLink]="['/tag', tag.name]" 
+       (click)="selectTag(tag.name)"
+       [class.selected]="selectedTag === tag.name">  <!-- Class binding for selected tag -->
+        {{tag.name}} ({{tag.count}})
+    </a>
+</div>
+
+<div *ngIf="foodPageTags">
+    <a *ngFor="let tagName of foodPageTags" 
+       [routerLink]="['/tag', tagName]" 
+       (click)="selectTag(tagName)"
+       [class.selected]="selectedTag === tagName">  <!-- Class binding for selected tag -->
+        {{tagName}}
+    </a>
+</div>

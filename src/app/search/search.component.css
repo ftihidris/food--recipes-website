@@ -1,0 +1,35 @@
+.searchBar {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.searchBar input{
+    border-radius: 10rem 0 0 10rem;
+    border: none;
+    height: 2.5rem;
+    width: 20rem;
+    background-color: whitesmoke;
+    padding: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+
+}
+.searchBar button{
+    color: white;
+    background-color: brown;
+    height: 2.5rem;
+    width: 5rem;
+    font-size: 1rem;
+    border-radius: 0 10rem 10rem 0;
+    border: none;
+    outline: none;
+
+}
+
+.searchBar button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}

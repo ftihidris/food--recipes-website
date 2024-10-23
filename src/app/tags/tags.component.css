@@ -1,0 +1,25 @@
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div a {
+    background-color: whitesmoke;
+    padding: .3rem 1rem;
+    margin: .2rem .2rem;
+    border-radius: 10rem;
+    color: brown;
+    font-size: 0.9rem;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+div a:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+div a.selected {
+    background-color: brown; /* Change background color */
+    color: white; /* Change text color */
+}
