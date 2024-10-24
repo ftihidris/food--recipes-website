@@ -1,17 +1,30 @@
-<div *ngIf="tags">
-    <a *ngFor="let tag of tags" 
-       [routerLink]="['/tag', tag.name]" 
-       (click)="selectTag(tag.name)"
-       [class.selected]="selectedTag === tag.name">  <!-- Class binding for selected tag -->
-        {{tag.name}} ({{tag.count}})
+<div *ngIf="tags" class="flex flex-wrap justify-center">
+    <a
+      *ngFor="let tag of tags"
+      [routerLink]="['/tag', tag.name]"
+      (click)="selectTag(tag.name)"
+      [ngClass]="{
+        'bg-red-800 text-white': selectedTag === tag.name,
+        'bg-slate-100 text-brown': selectedTag !== tag.name
+      }"
+      class="mb-5 text-sm py-1 px-4 m-1 rounded-full transition duration-300 cursor-pointer hover:bg-red-800 hover:text-white"
+    >
+      {{ tag.name }} ({{ tag.count }})
     </a>
-</div>
-
-<div *ngIf="foodPageTags">
-    <a *ngFor="let tagName of foodPageTags" 
-       [routerLink]="['/tag', tagName]" 
-       (click)="selectTag(tagName)"
-       [class.selected]="selectedTag === tagName">  <!-- Class binding for selected tag -->
-        {{tagName}}
+  </div>
+  
+  <div *ngIf="foodPageTags" class="flex flex-wrap justify-center">
+    <a
+      *ngFor="let tagName of foodPageTags"
+      [routerLink]="['/tag', tagName]"
+      (click)="selectTag(tagName)"
+      [ngClass]="{
+        'bg-red-800 text-white': selectedTag === tagName,
+        'bg-slate-100 text-brown': selectedTag !== tagName
+      }"
+      class="mb-5 text-sm py-1 px-4 m-1 rounded-full transition duration-300 cursor-pointer hover:bg-red-800 hover:text-white"
+    >
+      {{ tagName }}
     </a>
-</div>
+  </div>
+  

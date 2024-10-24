@@ -1,42 +1,40 @@
 <app-not-found [visible]="!food" notFoundMessage="Product Not Found" resetLinkText="Back to Homepage"></app-not-found>
-<div *ngIf="food" class="container">
-    <img [src]="food.imageUrl" [alt]="food.name" />
 
-    <div class="details">
-        <div class="header">
-            <span class="name">
-                {{food.name}}
-            </span>
-            <span class="favorite {{food.favorite?'':'not'}}">
+<div *ngIf="food" class="flex flex-wrap justify-center m-12">
+    <img [src]="food.imageUrl" [alt]="food.name" class="rounded-3xl object-cover h-[35rem] flex-1 m-4" />
+
+    <div class="details w-full flex flex-col flex-1 rounded-3xl p-8 text-black ml-4">
+        <div class="header flex justify-between items-center">
+            <span class="name text-3xl font-bold">{{food.name}}</span>
+            <span [ngClass]="{'text-red-600': food.favorite, 'text-gray-400': !food.favorite}" class="text-4xl">
                 ❤
             </span>
         </div>
+
         <div class="rating">
             <app-star-rating [stars]="food.stars" />
-
         </div>
 
-        <div class="origins">
-            <span *ngFor="let origin of food.origins">
+        <div class="origins flex flex-wrap my-4">
+            <span *ngFor="let origin of food.origins" class="bg-slate-100 p-1 px-7 text-lg rounded-full mr-2 mb-2">
                 {{origin}}
             </span>
         </div>
 
-        <div class="tags">
+        <div class="tags flex flex-wrap">
             <app-tags [foodPageTags]="food.tags" justifyContent="start"></app-tags>
         </div>
 
-        <div class="cook-time">
-            <span>
-                Time to cook about <strong>{{food.cookTime}}</strong> minutes
-            </span>
+        <div class="cook-time mt-4">
+            <span class="rounded-full text-xl p-2">Time to cook about <strong>{{food.cookTime}}</strong> minutes</span>
         </div>
 
-        <div class="price">
-            <span>{{food.price|currency}}</span>
+        <div class="price text-2xl my-8 text-green-600">
+            <span>Price: {{food.price | currency}}</span>
         </div>
 
-        <button (click)="addToCart()">Add To Cart</button>
+        <button (click)="addToCart()" class="text-white bg-red-800 py-3 px-6 text-lg rounded-full transition-opacity duration-300 hover:opacity-90">
+            Add To Cart
+        </button>
     </div>
-
 </div>
