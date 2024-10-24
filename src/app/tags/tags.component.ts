@@ -1,6 +1,6 @@
 import { Component,Input,OnInit } from '@angular/core';
 import { Tag } from '../shared/models/Tag';
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FoodService } from '../services/food/food.service';
 
@@ -10,7 +10,8 @@ import { FoodService } from '../services/food/food.service';
   imports: [
     NgIf,
     NgFor,
-    RouterModule],
+    RouterModule, 
+    CommonModule],
   templateUrl: './tags.component.html',
   styleUrl: './tags.component.css'
 })

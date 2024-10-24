@@ -1,4 +1,15 @@
-<div class="searchBar">
-    <input type="text" placeholder="Search Food Mine" [(ngModel)]="searchTerm" (change)="search()">
-    <button (click)="search()">Search</button>
+<div class="flex justify-center mt-12 mb-10 ">
+    <input
+        type="text"
+        placeholder="Search Food Mine"
+        [(ngModel)]="searchTerm"
+        (change)="search()"
+        class="rounded-l-full shadow-md text-sm border-none h-10 w-80 bg-slate-100 py-2 px-4 font-medium focus:outline-none"
+    >
+    <button
+        (click)="search()"
+        class="bg-red-800 shadow-md text-sm text-white h-10 w-20 rounded-r-full transition-opacity duration-300 hover:opacity-80"
+    >
+        Search
+    </button>
 </div>
