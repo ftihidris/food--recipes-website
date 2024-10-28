@@ -14,7 +14,7 @@
       <div class="p-4 relative">
         <div class="font-semibold text-lg">{{ food.name }}</div>
         <span
-          class="absolute top-2 right-4 text-xl {{
+          class="absolute top-3 right-4 text-xl {{
             food.favorite ? '' : 'text-gray-400'
           }}"
           >❤</span
@@ -30,8 +30,8 @@
               >{{ origin }}</span
             >
           </div>
-          <div class="text-xs text-right">
-            <span>🕒 {{ food.cookTime }}</span>
+          <div class="pi pi-clock text-xs text-right">
+            <span> {{ food.cookTime }}</span>
           </div>
         </div>
         <div class="mt-2 text-gray-800">

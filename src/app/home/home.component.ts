@@ -7,6 +7,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { TagsComponent } from "../tags/tags.component";
 import { NotFoundComponent } from "../not-found/not-found.component";
+import { PrimeIcons } from 'primeng/api';
 
 
 @Component({
@@ -19,7 +20,7 @@ import { NotFoundComponent } from "../not-found/not-found.component";
     SearchComponent,
     TagsComponent,
     RouterModule,
-    NotFoundComponent
+    NotFoundComponent,
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

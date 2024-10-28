@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { TagsComponent } from "../tags/tags.component";
 import { CartService } from '../services/cart/cart.service';
 import { NotFoundComponent } from "../not-found/not-found.component";
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-food-page',
@@ -15,7 +16,9 @@ import { NotFoundComponent } from "../not-found/not-found.component";
     StarRatingComponent,
     CommonModule,
     TagsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ButtonModule
+
 ],
   templateUrl: './food-page.component.html',
   styleUrl: './food-page.component.css'
